@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  background-image: linear-gradient(180deg, rgba(124,58,237,0.06), rgba(2,6,23,0) 40%),
+    radial-gradient(600px 200px at 80% 0%, rgba(124,58,237,0.15), rgba(2,6,23,0)),
+    radial-gradient(600px 200px at 10% 0%, rgba(14,165,233,0.12), rgba(2,6,23,0));
+}
+
+.container-px {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply relative container-px mx-auto max-w-6xl py-20 md:py-28 scroll-mt-24 md:scroll-mt-28;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+@layer base {
+  h1 {@apply tracking-tight;}
+  h2 {@apply tracking-tight;}
+  :focus-visible {@apply outline-none ring-2 ring-brand-600/60 ring-offset-2 ring-offset-slate-900/0 dark:ring-offset-slate-950/0;}
+  @media (prefers-reduced-motion: reduce) {
+    * {@apply !transition-none motion-reduce:transform-none;}
+  }
+}
+
+@layer components {
+  .btn {@apply inline-flex items-center justify-center rounded-lg text-sm font-medium transition-all duration-200;
+  }
+  .btn-primary {@apply btn bg-brand-600 text-white hover:bg-brand-700 shadow-[0_0_0_rgb(0,0,0/0)] hover:shadow-[0_0_24px_rgba(124,58,237,0.45)];}
+  .btn-outline {@apply btn border border-white/10 text-slate-200 hover:bg-white/10;}
+  .icon-btn {@apply inline-flex items-center justify-center rounded-lg p-2 border border-white/10 text-slate-300 hover:bg-white/10 transition-colors;}
+  .badge {@apply text-xs px-2 py-1 rounded-lg bg-white/10 border border-white/10;}
+  .nav-link {@apply px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white transition-colors;}
+  .nav-link-active {@apply bg-white/10 text-white;}
+}
+
+
