@@ -10,7 +10,7 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           framer: ['framer-motion'],
           three: ['@react-three/fiber', '@react-three/drei', 'three'],
-          particles: ['react-tsparticles', 'tsparticles'],
+          particles: ['react-tsparticles', 'tsparticles-slim'],
           icons: ['react-icons', 'lucide-react'],
           toast: ['react-hot-toast']
         }
@@ -19,6 +19,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion']
+    include: ['react', 'react-dom', 'framer-motion', 'tsparticles-slim']
   }
 })
