@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NPM_CONFIG_LOGLEVEL = "verbose"
+  CI = "true"
   # Exclude server directory from secrets scanning
   # Server code is not deployed to Netlify (frontend-only deploy)
   SECRETS_SCAN_OMIT_PATHS = "server/**"
