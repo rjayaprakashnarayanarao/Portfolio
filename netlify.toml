@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  # Exclude server directory from secrets scanning
+  # Server code is not deployed to Netlify (frontend-only deploy)
+  SECRETS_SCAN_OMIT_PATHS = "server/**"
+
